@@ -3,11 +3,76 @@
   <head>
     <style>
       .spaced {
-  display: flex;
-  /* This puts space between them; use 'flex-start' to keep them side-by-side */
-  justify-content: flex-start; 
+        display: flex;
+        /* This puts space between them; use 'flex-start' to keep them side-by-side */
+        justify-content: flex-start;
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
 
-}
+      .project-card {
+        background: white;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        transition: transform 0.25s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .project-card iframe {
+        border: none;
+      }
+
+      .project-content {
+        padding: 20px;
+      }
+
+      .project-content h3 {
+        margin-bottom: 10px;
+      }
+
+      .tech-stack {
+        display: flex;
+        gap: 10px;
+        margin: 15px 0;
+        flex-wrap: wrap;
+      }
+
+      .tech-stack span {
+        background: #eef2f7;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+      }
+
+      .project-btn {
+        display: inline-block;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.2s ease;
+      }
+
+      .project-btn:hover {
+        opacity: 0.9;
+      }
+
+      .dark-mode .project-card {
+        background: #1f2933;
+      }
+
+      .dark-mode .tech-stack span {
+        background: #374151;
+      }
       /* RESET */
       * {
         box-sizing: border-box;
@@ -143,20 +208,103 @@
 
       <section>
         <h2>Projects</h2>
-       <div style="border: 1px solid #ccc; width: 300px;"class="spaced">
-  <p>Preview:</p>
-  <iframe src="https://justinritchie097.github.io/Fyodor-Dostoevsky-site/" width="300" height="200"></iframe>
-  <br>
-  <a href="https://justinritchie097.github.io/Fyodor-Dostoevsky-site/">Visit Website</a>
 
-<p>Preview:</p>
-  <iframe src="https://justinritchie097.github.io/Neuroplasticity-studies/" width="300" height="200"></iframe>
-  <br>
-  <a href="https://justinritchie097.github.io/Neuroplasticity-studies/">Visit Website</a>
-  
-         
-</div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <iframe
+              src="https://justinritchie097.github.io/Fyodor-Dostoevsky-site/"
+              width="100%"
+              height="220"
+            >
+            </iframe>
 
+            <div class="project-content">
+              <h3>Dostoevsky Fan Site</h3>
+
+              <p class="muted">
+                A literary fan website dedicated to Fyodor Dostoevsky, featuring
+                quotes, themes, and visual design.
+              </p>
+
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+
+              <a
+                href="https://justinritchie097.github.io/Fyodor-Dostoevsky-site/"
+                target="_blank"
+                class="project-btn"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <iframe
+              src="https://justinritchie097.github.io/Neuroplasticity-studies/"
+              width="100%"
+              height="220"
+            >
+            </iframe>
+
+            <div class="project-content">
+              <h3>Neuroplasticity Research Site</h3>
+
+              <p class="muted">
+                Educational neuroscience website exploring the brain’s ability
+                to change using scientific evidence.
+              </p>
+
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+
+              <a
+                href="https://justinritchie097.github.io/Neuroplasticity-studies/"
+                target="_blank"
+                class="project-btn"
+              >
+                View Project
+              </a>
+            </div>
+            <!-- closes project-content -->
+          </div>
+          <!-- closes second project-card -->
+          <div class="project-card">
+            <iframe
+              src="https://justinritchie097.github.io/smallsocialnetwork/"
+              width="100%"
+              height="220"
+            >
+            </iframe>
+            <div class="project-content">
+              <h3>Small social network site with login page</h3>
+
+              <p class="muted">
+                A small social network website with a login page, allowing users
+                to create accounts and share posts.
+              </p>
+
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a
+                href="https://justinritchie097.github.io/smallsocialnetwork/"
+                target="_blank"
+                class="project-btn"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </body>
@@ -168,3 +316,4 @@
     });
   </script>
 </html>
+
